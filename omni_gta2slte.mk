@@ -21,6 +21,12 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Otherwise, If you have 32-bit device, add the below line instead of above line
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+
+# Another common config inclusion
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+
 # Inherit from gta2slte device
 $(call inherit-product, device/samsung/gta2slte/device.mk)
 
@@ -35,3 +41,9 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T385
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_RELEASE_NAME := samsung SM-T385
+
+# Add fingerprint from Stock ROM build.prop
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    # These lines are from my device. You MUST Replace yours.
+    BUILD_FINGERPRINT="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU3CTH2:user/release-keys" \
+    PRIVATE_BUILD_DESC="gta2sltedx-user 9 PPR1.180610.011 T385DXU3CTH2 release-keys"
