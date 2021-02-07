@@ -82,5 +82,4 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_VERSION_STR := by_BROKENAX3
 
