@@ -45,5 +45,4 @@ PRODUCT_RELEASE_NAME := samsung SM-T385
 # Add fingerprint from Stock ROM build.prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
     # These lines are from my device. You MUST Replace yours.
-    BUILD_FINGERPRINT="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU3CTH2:user/release-keys" \
-    PRIVATE_BUILD_DESC="gta2sltedx-user 9 PPR1.180610.011 T385DXU3CTH2 release-keys"
+    BUILD_FINGERPRINT="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU3CTH2:user/release-keys"
