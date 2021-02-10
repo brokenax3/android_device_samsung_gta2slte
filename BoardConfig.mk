@@ -49,7 +49,7 @@ TARGET_RECOVERY_DEVICE_DIRS += device/samsung/gta2slte
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
-# TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x02000000
@@ -71,12 +71,15 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno308
 #PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
+TW_DEVICE_VERSION := 1_BROKENAX3
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_THEME := portrait_hdpi
-#TW_EXTRA_LANGUAGES := true
+# TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
-TW_EXCLUDE_MTP := false
+TW_EXCLUDE_SUPERSU := true
 TWHAVE_SELINUX := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 RECOVERY_SDCARD_ON_DATA := true 
@@ -87,5 +90,12 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 150
-TW_MTP_DEVICE := "Samsung T385"
+# TW_MTP_DEVICE := "Samsung T385"
+TW_IGNORE_MISC_WIPE_DATA := true
 # TWRP_INCLUDE_LOGCAT := true
+#
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+#
+# Selinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/gta2slte/selinux
