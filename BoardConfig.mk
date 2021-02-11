@@ -90,11 +90,11 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 150
-# TW_MTP_DEVICE := "Samsung T385"
+TW_MTP_DEVICE := "/dev/mtp_usb"
 TW_IGNORE_MISC_WIPE_DATA := true
 # TWRP_INCLUDE_LOGCAT := true
 #
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 #
 # Selinux
 BOARD_SEPOLICY_DIRS += \
