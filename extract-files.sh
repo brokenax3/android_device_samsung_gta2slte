@@ -13,7 +13,7 @@ fi
 
 set -e
 
-export DEVICE=j6primelte
+export DEVICE=gta2slte
 export DEVICE_COMMON=msm8917-common
 export VENDOR=samsung
 
