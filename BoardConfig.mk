@@ -1,7 +1,6 @@
 #
 # Copyright (C) 2020 The Android Open Source Project
 # Copyright (C) 2020 The TWRP Open Source Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -49,7 +48,7 @@ TARGET_RECOVERY_DEVICE_DIRS += device/samsung/gta2slte
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
+# TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x02000000
@@ -65,10 +64,6 @@ TARGET_KERNEL_CONFIG := gta2slte_defconfig
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno308
-
-# Hack: prevent anti rollback
-#PLATFORM_SECURITY_PATCH := 2099-12-31
-#PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
 TW_DEVICE_VERSION := 1_BROKENAX3
