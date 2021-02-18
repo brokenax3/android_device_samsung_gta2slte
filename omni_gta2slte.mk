@@ -16,22 +16,22 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Otherwise, If you have 32-bit device, add the below line instead of above line
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+# $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+#
+# Add this line if your device is 64-bit
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Another common config inclusion
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
 # Inherit from gta2slte device
-$(call inherit-product, device/samsung/gta2slte/device.mk)
+# $(call inherit-product, device/samsung/gta2slte/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+# $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gta2slte
@@ -44,4 +44,7 @@ PRODUCT_RELEASE_NAME := samsung SM-T385
 # Add fingerprint from Stock ROM build.prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
     # These lines are from my device. You MUST Replace yours.
-    BUILD_FINGERPRINT="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU3CTH2:user/release-keys"
+    BUILD_FINGERPRINT="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU4CUA2:user/test-keys"
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb
