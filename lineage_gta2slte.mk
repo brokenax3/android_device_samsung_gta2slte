@@ -24,7 +24,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gta2slte
@@ -37,7 +37,7 @@ PRODUCT_RELEASE_NAME := samsung SM-T385
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 TARGET_VENDOR := samsung
 TARGET_VENDOR_PRODUCT_NAME := gta2slte
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="samsung gta2sltedx gta2slte:9 PPR1.180610.011 T385DXU3CTH2:user release-keys"
+# PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU4CUA2:user/test-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU3CTH2:user/release-keys"
+BUILD_FINGERPRINT := "samsung/gta2sltedx/gta2slte:9/PPR1.180610.011/T385DXU4CUA2:user/test-keys"

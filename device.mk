@@ -18,13 +18,16 @@ $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/msm8917_camera_gta2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8917_camera_gta2s.xml
+    $(LOCAL_PATH)/camera/msm8917_camera_gta2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8917_camera_gta2s.xml \
+		$(LOCAL_PATH)/camera/P08QL_s5k4h5yc_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/P08QL_s5k4h5yc_module_info.xml \
+    $(LOCAL_PATH)/camera/Q08QL_s5k4h5yc_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/Q08QL_s5k4h5yc_module_info.xml \
+    $(LOCAL_PATH)/camera/D05QL_s5k5e3yx_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/D05QL_s5k5e3yx_module_info.xml \
 
 # Fingerprint
 #PRODUCT_PACKAGES += \
 #    fingerprint.msm8937
 
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung
 	
 # Permissions

@@ -2,17 +2,5 @@
 vendor/bin/mm-qcamera-daemon
 vendor/lib/libmmcamera2_sensor_modules.so
 
-# Lol this device does not have
-# Fingerprint
-# vendor/etc/process_authenticator/pa_config
-# vendor/etc/yas_set.cfg
-# vendor/lib/libbauthserver.so
-# vendor/lib/libbauthtzcommon.so
-# vendor/lib/libegis_fp_normal_sensor_test.so
-# vendor/lib/libgf_in_system_lib.so
-# vendor/lib/libqfp_sensortest.so
-# vendor/lib/libsynaFpSensorTestNwd.so
-# vendor/lib/libyasalgo.so
-
 # Sensors
 vendor/lib/hw/sensors.msm8937.so
